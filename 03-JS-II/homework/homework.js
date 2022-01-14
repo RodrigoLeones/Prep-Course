@@ -86,7 +86,7 @@ function colors(color) {
     default:
       console.log ("Color not found");
   }
-
+}
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
