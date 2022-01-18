@@ -17,11 +17,11 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad > 18) {
+  if (edad >= 18) {
     return "Allowed"
   }
   else {
-    return "Not Allowd"
+    return "Not allowed"
   }
 }
 
@@ -89,24 +89,14 @@ function esDiezOCinco(numero) {
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
-    if (numero === 5 || numero === 10) {
-      return "true"
-    }
-    else {
-      return "false"
-    }
+    return (numero === 5 || numero === 10)
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero > 20 && numero < 50) {
-    return "true"
-  }
-  else {
-    return "false"
-  }
+  return (numero > 20 && numero < 50)
 }
 
 function esEntero(numero) {
@@ -117,7 +107,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return Math.floor(numero)
+  return (numero % 1 ===0)
 }
 
 function fizzBuzz(numero) {
@@ -146,14 +136,20 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if (num1 < 0 || num2 < 0 || num3 < 0) {
+  if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error"
+  }
+  else if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos"
   }
   else if (num1 > num2 && num1 > num3 && num1 > 0) {
-    return "Numero 1 es mayor y positivo"
+    return "Número 1 es mayor y positivo"
   }
   else if (num3 > num1 && num3 > num2) {
-    
+    return num3 + 1
+  }
+  else {
+    return false
   }
 }
 
@@ -178,8 +174,8 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  if (valor > 0) {
-    return "Soy Verdadero"
+  if (valor === true) {
+    return "Soy verdadero"
   }
   else {
     return "Soy falso"
@@ -201,7 +197,10 @@ function tieneTresDigitos(numero){
   //Leer un número entero y determinar si tiene 3 dígitos.
   //Escribe tu código aquí
   if (numero > 99 && numero < 1000) {
-    return numero
+    return true
+  }
+  else {
+    return false
   }
 }
 
